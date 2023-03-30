@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Public Blockchain",
+    "data":[
+      {
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "homepage": "https://bitcoin.org",
+        "whitePaper":"https://bitcoin.org/bitcoin.pdf",
+        "description": "Bitcoin is an innovative payment network and a new kind of money.",
+        "wallet": "https://bitcoin.org/en/choose-your-wallet?step=5"
+      },
+      {
+        "name": "Ethereum",
+        "symbol": "BTC",
+        "homepage": "",
+        "description": "Bitcoin first"
+      }
+    ]
+  },
+
+  {
+    "title": "Exchanges",
+    "data": [
+      {
+        "name": "Binance",
+        "symbol": "",
+        "homepage": "https://www.binance.com/",
+        "description": "CEX",
+        "tag": "CEX"
+      },
+      {
+        "name": "Uniswap",
+        "symbol": "UNI",
+        "homepage": "https://uniswap.org",
+        "description": "Uniswap"
+      }
+    ]
+  }
+]
