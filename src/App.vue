@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-
-</script>
 
 <template>
   <a-layout>
@@ -19,24 +14,33 @@ import HelloWorld from './components/HelloWorld.vue'
           <template #renderItem="{ item }">
             <a-list-item>
               <h3 :style="{ marginBottom: '16px' }">{{item.title}}</h3>
+
                 <a-list :grid="{ gutter: 16, column: 3}" :data-source="item.data">
 
-                  <template #renderItem="{item2}">
+                  <template #renderItem="{item:item2}">
                     <a-list-item>
-                      <template #actions>
-<!--                        <component :is="" style="margin-right: 8px" />-->
-                        <svg class="fusion small">
-                          <use xlink:href="@/assets/fusion-coins.svg#ONEINCH_8104"></use>
-                        </svg>
-                      </template>
 
-                      <a-card :title="item2.name">
-                        {{item2.description}}
+                      <a-card hoverable>
+                        <template #actions>
+                          <a :href="item2.homepage" target="_blank" title="Home Page" > <svg class="fusion small"><use xlink:href="@/assets/fusion-interface.svg#home"></use></svg></a>
+                          <a :href="item2.wallet" target="_blank" title="Wallet" > <svg class="fusion small"><use xlink:href="@/assets/fusion-web3.svg#dcentwallet"></use></svg></a>
+                          <a :href="item2.whitePaper" target="_blank" title="White Paper" > <svg class="fusion small"><use xlink:href="@/assets/fusion-interface.svg#file_pdf"></use></svg></a>
+                          <a :href="item2.socialMedia" target="_blank" title="Social Media" ><svg class="fusion small"><use xlink:href="@/assets/fusion-interface.svg#phone_video_pc"></use></svg></a>
+                        </template>
 
+                        <a-card-meta :title="`${item2.name}&nbsp;(${item2.symbol})`" :description="item2.description">
+                          <template #avatar>
+                            <svg class="fusion small"> <use :xlink:href="'/src/assets/fusion-coins.svg#'+ item2.icon"></use></svg>
+                          </template>
+                        </a-card-meta>
                       </a-card>
+
                     </a-list-item>
                   </template>
                 </a-list>
+
+
+
             </a-list-item>
           </template>
         </a-list>
@@ -50,13 +54,19 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <script lang="ts">
 import mainData from './assets/main.json'
+
+
+
 export default {
   data() {
     return {
       data: mainData
     }
-  }
+  },
+
 }
+
+
 </script>
 
 <style scoped>

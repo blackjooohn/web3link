@@ -2,6 +2,7 @@
   "name": "web3link",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://www.web3link.me",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",

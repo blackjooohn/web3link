@@ -8,7 +8,9 @@
         "homepage": "https://bitcoin.org",
         "whitePaper":"https://bitcoin.org/bitcoin.pdf",
         "description": "Bitcoin is an innovative payment network and a new kind of money.",
-        "wallet": "https://bitcoin.org/en/choose-your-wallet?step=5"
+        "wallet": "https://bitcoin.org/en/choose-your-wallet?step=5",
+        "icon": "BTC_1",
+        "socialMedia": "https://twitter.com/bitcoincoreorg"
       },
       {
         "name": "Ethereum",
